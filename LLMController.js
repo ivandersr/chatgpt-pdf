@@ -1,4 +1,4 @@
-const documentLoader = require('./DocumentLoaderService');
+const LLMService = require('./LLMService');
 
 class LLMController {
   query = async (req, res) => {
@@ -10,7 +10,7 @@ class LLMController {
       });
     }
 
-    const answer = await documentLoader.loadDocument({
+    const answer = await LLMService.query({
       path: './assets/doc.pdf',
       question
     });
