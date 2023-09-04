@@ -11,7 +11,7 @@ class LLMController {
     }
 
     const answer = await LLMService.query({
-      path: './assets/doc.pdf',
+      path: './assets',
       question
     });
 
